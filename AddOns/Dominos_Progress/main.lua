@@ -24,6 +24,7 @@ function ProgressBarModule:Load()
 	end
 
 	-- common events
+	self:RegisterEvent("ADDON_LOADED")
 	self:RegisterEvent("PLAYER_ENTERING_WORLD")
 	self:RegisterEvent("UPDATE_EXHAUSTION")
 	self:RegisterEvent("PLAYER_UPDATE_RESTING")
@@ -51,7 +52,7 @@ function ProgressBarModule:Load()
 		self:RegisterEvent("AZERITE_ITEM_EXPERIENCE_CHANGED")
 	end
 
-	self:RegisterEvent("ADDON_LOADED")
+	self:UpdateAllBars()
 end
 
 function ProgressBarModule:UpdateAllBars()
@@ -114,10 +115,14 @@ function ProgressBarModule:HONOR_LEVEL_UPDATE()
 end
 
 function ProgressBarModule:ADDON_LOADED(event, addonName)
-	if addonName == "Dominos_Config" then
-		self:AddOptionsPanel()
-		self:UnregisterEvent("ADDON_LOADED")
-	end
+	if addonName ~= "Dominos_Config" then return end
+
+	self:AddOptionsPanel()
+	self:UnregisterEvent("ADDON_LOADED")
+end
+
+function ProgressBarModule:OnMediaUpdated(event, ...)
+	self:UpdateAllBars()
 end
 
 function ProgressBarModule:AddOptionsPanel()
