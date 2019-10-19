@@ -1,0 +1,20 @@
+lightweight tag 6440af848e08c26358a314d288f2f15ad237a77a v1.0.2
+Author:	GitHub <noreply@github.com>
+Date:	Thu Oct 17 01:39:55 2019 -0500
+
+commit d8146fe8247e930f6a18feb3d110cf658439e51c
+Author: jpcope <joseph.copenhaver@rewardstyle.com>
+Date:   Thu Oct 17 01:38:25 2019 -0500
+
+    fix pkgmeta.yaml
+    
+    guess this will now be v1.0.2
+
+commit d8146fe8247e930f6a18feb3d110cf658439e51c
+Author: jpcope <joseph.copenhaver@rewardstyle.com>
+Date:   Thu Oct 17 01:38:25 2019 -0500
+
+    fix pkgmeta.yaml
+    
+    guess this will now be v1.0.2
+
